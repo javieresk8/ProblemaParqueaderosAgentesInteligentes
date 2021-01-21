@@ -20,7 +20,12 @@ public class PlacaRandom implements Serializable{
         return placa;
     }
     
+    public void regenerarPlaca(){
+        this.placa = generarPlaca();
+    }
+    
     public String generarPlaca(){
+        
         String pl= "";
         Random r = new Random(System.currentTimeMillis());
         /*Generamos 3 letras mayusculas aleatorias*/

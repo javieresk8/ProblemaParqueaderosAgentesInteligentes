@@ -26,7 +26,7 @@ public class Prueba1 {
         
         String resultado = null;
         try {
-            System.out.println("llego a empezar de prueba");
+            //System.out.println("llego a empezar de prueba");
             Configuration configuracion = new DefaultConfiguration();
             
             FitnessFunction funcion = new FuncionAptitud1(parking);
@@ -45,12 +45,12 @@ public class Prueba1 {
             System.out.println("Poblacion iniciada");
             Mostrar show = new Mostrar();
             
-            for(int m=0; m < 10; m++){
+            for(int m=0; m < 20; m++){
                 System.out.println("-------------------Inicio generacion-------------------");
                 System.out.println("Iteracion #" + m);
                 show.mostrarTodosIndividuos(poblacion.getChromosomes());
                // System.out.println("llegue");
-                poblacion.evolve(12);
+                poblacion.evolve(20);
                 IChromosome mejorIndividuo = poblacion.getFittestChromosome();
                 show.mostrarIndividuo(mejorIndividuo);
                 //valorY = mejorIndividuo.getFitnessValue();

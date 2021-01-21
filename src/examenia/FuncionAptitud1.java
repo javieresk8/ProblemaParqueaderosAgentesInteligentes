@@ -40,13 +40,14 @@ public class FuncionAptitud1 extends FitnessFunction {
             valorX += individuo[i].toString();
         }
         int valorXint = Integer.parseInt(valorX, 2);
+//        if (valorXint >9){
+//            valorXint = 9;
+//        }
         valorY += individuo[4].toString();
         valorY += individuo[5].toString();
         int valorYint = Integer.parseInt(valorY, 2);
         fitness = Math.sqrt(73) - calcularFuncion(valorXint, valorYint); //Raiz de 73 porque el mayor punto se consigue con[8,3]
-        if (valorYint >= 9){
-            fitness = 0;
-        }
+        
         //Validamos que se calcule con un valor disponible
         //necesitamos el mapa del parking para eso
         if (!this.parking.consultarPlaza(valorXint, valorYint)){

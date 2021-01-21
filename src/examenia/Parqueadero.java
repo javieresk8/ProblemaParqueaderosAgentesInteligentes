@@ -31,12 +31,24 @@ public class Parqueadero {
         this.filas = 10;
         this.columnas = 5;
         mapa = new int[filas][columnas];
+        
         marcarPlazas();
+        mapa[8][3]= -1;
         
     }
     public boolean consultarPlaza(int x, int y){
 //        System.out.println("Estoy comparando");
-        return x < filas && this.mapa[x][y] == 1;
+        //Validaciones para no tomar valores no disponibles
+        if (x <=8  && x>0 && x != 3 && x != 6){
+            if(this.mapa[x][y] ==0){
+                return false;
+            } else if(this.mapa[x][y] == 1) {
+                return true;
+            }
+        }
+           
+                
+        return false;
     }
     public void marcarPlazas(){
         for(int i = 1; i < 9; i++){

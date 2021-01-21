@@ -44,7 +44,7 @@ public class Agente1 extends Agent {
             String msjag2 = acl.getContent();
             System.out.println("He recibido respuesta de Ag2, me dice que:" + msjag2);
             
-            if(msjag2 =="NOHAY"){
+            if(msjag2.equalsIgnoreCase("NOHAY")){
                 /*Caso donde ya no hay parqueaderos disponibles*/
                 new EnviarMensaje().enviarMensajeString(ACLMessage.REQUEST, "Ag3", getAgent(), msjag2, "Ag1-Ag3");
                 doDelete();
@@ -52,8 +52,9 @@ public class Agente1 extends Agent {
             } else {
                 String msjAg3 = "Para la Placa " + placa.getPlaca() +" " + msjag2;
                 new EnviarMensaje().enviarMensajeString(ACLMessage.INFORM, "Ag3", getAgent(), msjAg3, "Ag1-Ag3");
-                System.err.println("Agente1 me pongo a esperar 5 segundos");
-                doWait(3000);
+                System.err.println("Agente1 me pongo a esperar 2 segundos");
+                doWait(2000);
+                placa.regenerarPlaca();
                 //System.err.println("Agente1 me pongo a esperar 5 segundos");
                 //block(5000);
                // wait(5000);

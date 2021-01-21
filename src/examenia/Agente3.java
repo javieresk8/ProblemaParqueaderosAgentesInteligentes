@@ -35,7 +35,7 @@ public class Agente3 extends Agent {
             try {
                 ACLMessage acl = blockingReceive();
                 String msj = acl.getContent();
-                if(msj =="NOHAY"){
+                if(msj.equalsIgnoreCase("NOHAY")){
                     /*Caso donde ya no hay parqueaderos disponibles*/
                     doDelete();
                 
