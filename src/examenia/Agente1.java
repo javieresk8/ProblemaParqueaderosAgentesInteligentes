@@ -6,6 +6,8 @@ import jade.core.behaviours.CyclicBehaviour;
 import jade.core.behaviours.SimpleBehaviour;
 import jade.lang.acl.ACLMessage;
 import java.util.StringTokenizer;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 /**
  *
  * @author Javier Erazo
@@ -49,8 +51,14 @@ public class Agente1 extends Agent {
                 
             } else {
                 String msjAg3 = "Para la Placa " + placa.getPlaca() +" " + msjag2;
-                new EnviarMensaje().enviarMensajeString(ACLMessage.REQUEST, "Ag3", getAgent(), msjAg3, "Ag1-Ag3");
-                blockingReceive();
+                new EnviarMensaje().enviarMensajeString(ACLMessage.INFORM, "Ag3", getAgent(), msjAg3, "Ag1-Ag3");
+                System.err.println("Agente1 me pongo a esperar 5 segundos");
+                doWait(3000);
+                //System.err.println("Agente1 me pongo a esperar 5 segundos");
+                //block(5000);
+               // wait(5000);
+                    //restart();
+                    //blockingReceive();
             }
             
             

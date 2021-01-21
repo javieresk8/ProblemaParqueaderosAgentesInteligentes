@@ -56,7 +56,8 @@ public class Agente2 extends Agent {
                     Agente2.parking.marcarOcupado(x, y);
                     System.out.println("Marque como ocupado a:" + resultado);
                     System.out.println(Agente2.parking.toString());
-                    blockingReceive();
+                    
+                    //blockingReceive();
                 } else {
                     /*Este caso ya no hay plazas disponibles*/
                     new EnviarMensaje().enviarMensajeString(ACLMessage.REQUEST, "Ag1", getAgent(), "NOHAY", "Ag2-Ag1");
@@ -65,6 +66,7 @@ public class Agente2 extends Agent {
                 
                 
             } catch (Exception e) {
+                System.err.println(e);
             }
             
             

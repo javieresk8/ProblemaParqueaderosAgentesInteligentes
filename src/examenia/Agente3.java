@@ -42,7 +42,7 @@ public class Agente3 extends Agent {
                 } else {
                     System.out.println("Soy el Agente 3 he recibido el mensaje: \n\n\n" + 
                         "========================BIENVENIDO==============================\n"+msj);
-                    blockingReceive();
+                    //blockingReceive();
                 }
                 
                

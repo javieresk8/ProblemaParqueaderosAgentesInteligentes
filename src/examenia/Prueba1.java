@@ -23,11 +23,16 @@ public class Prueba1 {
             this.parking = parking;
     }
     public String empezar(){
+        
         String resultado = null;
         try {
+            System.out.println("llego a empezar de prueba");
             Configuration configuracion = new DefaultConfiguration();
+            
             FitnessFunction funcion = new FuncionAptitud1(parking);
+            
             configuracion.setFitnessFunction(funcion);
+           
             /*Se utiliza 4 bits para x(maximo 15 ), 2 bits para y (maximo 3)*/
             Gene[] genes = new Gene[6];
             for(int i = 0; i < genes.length; i++){
@@ -59,6 +64,7 @@ public class Prueba1 {
         } catch (InvalidConfigurationException e) {
             System.err.println("No se pudo ejecutar el AG...");
         }
+        Configuration.reset();
         return resultado;
     }
 }
