@@ -23,7 +23,7 @@ public class Parqueadero {
         01110  //Bloque 2
         01110
         00000
-        01110 //Bloque 3
+        01110 //Bloque 3, el ultimo parqueadero esta reservado.
         01110
         00000*/
     int[][] mapa;
@@ -33,7 +33,7 @@ public class Parqueadero {
         mapa = new int[filas][columnas];
         
         marcarPlazas();
-        mapa[8][3]= -1;
+        mapa[8][3]= -1; //Parqueadero reservado, no disponible
         
     }
     public boolean consultarPlaza(int x, int y){
