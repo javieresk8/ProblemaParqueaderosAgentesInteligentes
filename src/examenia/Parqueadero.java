@@ -37,7 +37,7 @@ public class Parqueadero {
         
     }
     public boolean consultarPlaza(int x, int y){
-//        System.out.println("Estoy comparando");
+
         //Validaciones para no tomar valores no disponibles
         if (x <=8  && x>0 && x != 3 && x != 6){
             if(this.mapa[x][y] ==0){

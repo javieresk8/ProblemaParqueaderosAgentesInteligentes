@@ -22,17 +22,17 @@ public class Mostrar {
         
         for(int i = 0; i < individuo.length;i++){
             individuo[i] = (Integer) ind.getGene(i).getAllele(); 
-            //System.out.println("i");
+
         }
         
         for (int i=0; i < 4; i++){
             valorX += individuo[i].toString();
-            //System.out.println("El valor de x en Mostrar es:" +valorX);
+
         }
         int valorXint = Integer.parseInt(valorX, 2);
         valorY += individuo[4].toString() ;
         valorY += individuo[5].toString();
-        //System.out.println("El valor de y en mostrar es" + valorY);
+
         int valorYint = Integer.parseInt(valorY, 2);
         System.out.println(valorXint + ","+ valorYint); 
         return valorXint + ","+ valorYint;

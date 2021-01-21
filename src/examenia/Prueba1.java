@@ -49,16 +49,16 @@ public class Prueba1 {
                 System.out.println("-------------------Inicio generacion-------------------");
                 System.out.println("Iteracion #" + m);
                 show.mostrarTodosIndividuos(poblacion.getChromosomes());
-               // System.out.println("llegue");
+               
                 poblacion.evolve(20);
                 IChromosome mejorIndividuo = poblacion.getFittestChromosome();
                 show.mostrarIndividuo(mejorIndividuo);
-                //valorY = mejorIndividuo.getFitnessValue();
+                
                 System.out.println("El valor de aptitud obtenido es: " + mejorIndividuo.getFitnessValue());
                 System.out.println("-----------------------------------Fin Generacion---------------------------");
                 System.out.println("Mejor individuo: ");
                 resultado = show.mostrarIndividuo(poblacion.getFittestChromosome()); 
-               // System.out.println("he terminado");
+               
                 
             }
         } catch (InvalidConfigurationException e) {

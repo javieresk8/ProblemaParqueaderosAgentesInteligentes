@@ -40,9 +40,7 @@ public class FuncionAptitud1 extends FitnessFunction {
             valorX += individuo[i].toString();
         }
         int valorXint = Integer.parseInt(valorX, 2);
-//        if (valorXint >9){
-//            valorXint = 9;
-//        }
+
         valorY += individuo[4].toString();
         valorY += individuo[5].toString();
         int valorYint = Integer.parseInt(valorY, 2);

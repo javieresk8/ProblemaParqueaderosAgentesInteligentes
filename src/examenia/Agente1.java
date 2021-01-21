@@ -37,9 +37,7 @@ public class Agente1 extends Agent {
             System.out.println("Naci con la placa: " + placa.getPlaca());
             
             new EnviarMensaje().enviarMensajeString(ACLMessage.REQUEST, "Ag2", getAgent(), "Busca", "Ag1-Ag2");
-           // contenedor = (Contenedor)getArguments()[0];
-//           Parqueadero park = new Parqueadero();
-//            System.out.println(park.toString());
+
             ACLMessage acl = blockingReceive();
             String msjag2 = acl.getContent();
             System.out.println("He recibido respuesta de Ag2, me dice que:" + msjag2);
@@ -55,11 +53,7 @@ public class Agente1 extends Agent {
                 System.err.println("Agente1 me pongo a esperar 2 segundos");
                 doWait(2000);
                 placa.regenerarPlaca();
-                //System.err.println("Agente1 me pongo a esperar 5 segundos");
-                //block(5000);
-               // wait(5000);
-                    //restart();
-                    //blockingReceive();
+
             }
             
             

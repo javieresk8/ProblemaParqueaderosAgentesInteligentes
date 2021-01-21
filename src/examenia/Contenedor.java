@@ -38,14 +38,7 @@ public class Contenedor {
         }
         
     }
-    
-//    public void crearHijos(String nickname,Object[] conocimiento){
-//        try {
-//           // mainContainer.createNewAgent(nickname,AgenteH.class.getName(), conocimiento).start();
-//        } catch (Exception ex) {
-//           //Logger.getLogger(Contenedor.class.getName()).log(Level.SEVERE, null, ex);
-//        }
-//    }
+
     public static void main(String[] args) {
         new Contenedor().inicializarContenedor();
     }
